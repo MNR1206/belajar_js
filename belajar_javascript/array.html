@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>belajar array</title>
+</head>
+<body>
+    <script>
+        var alat = ["Ara Ara ", 1 ,true];
+        document.write(alat[0]);
+
+        for(var i = 0; i<alat.length;i++){
+            document.write("<br>");
+            document.write(alat[i]);
+        }
+
+        document.write("<br>");
+        
+        // tambah data
+        alat[3] = "windah";
+        alat.push("anji");
+
+        alat.shift(2)
+
+        // hapus data
+        delete alat[0];
+        alat.pop();''
+        document.write("<ol>");
+        alat.forEach((data)=>{
+            document.write(`<li>${data}</li`);
+        })
+        document.write("</ol>");
+    </script>
+</body>
+</html>

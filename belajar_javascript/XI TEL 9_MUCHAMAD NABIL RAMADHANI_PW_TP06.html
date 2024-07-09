@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Teman</title>
+</head>
+<body>
+    <h1>Data Teman</h1>
+    <table id="table" border="3">
+        <tr>
+            <th>No.</th>
+            <th>Nama Lengkap</th>
+            <th>Jenis Kelamin</th>
+            <th>Kelas</th>
+        </tr>
+    </table>
+    <script>
+        let data = [
+            ['1', 'Andi Nugraha', 'Laki-laki', 'X TKJ 1'],
+            ['2', 'Budi Santoso', 'Laki-laki', 'X TKJ 2'],
+            ['3', 'Cindy Dewi', 'Perempuan', 'X TKJ 3'],
+            ['4', 'Dani Susanto', 'Laki-laki', 'X TKJ 4'],
+            ['5', 'Nabil', 'Laki-Laki', 'XI RPL 9']
+        ];
+
+        let table = document.getElementById('table');
+
+        for (let i = 0; i < data.length; i++) {
+            let row = document.createElement('tr');
+
+            for (let j = 0; j < data[i].length; j++) {
+                let cell = document.createElement('td');
+                cell.innerHTML = data[i][j];
+                row.appendChild(cell);
+            }
+
+            table.appendChild(row);
+        }
+    </script>
+</body>
+</html>
